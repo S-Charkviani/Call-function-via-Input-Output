@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dummyGame';
+  oddNumbers: number[]=[];
+  evenNumbers: number[]=[];
+  
+onCounting(firedNumber: number){
+if (firedNumber%2===0){
+  this.evenNumbers.push(firedNumber);
+
+}else{
+  this.oddNumbers.push(firedNumber);
+}
+}
 }
